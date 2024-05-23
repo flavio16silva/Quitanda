@@ -20,3 +20,54 @@ p.truncar-3l {
   }
   
 }
+
+/* Transição suave para mudança de cor e fundo */
+label {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover: Aplica a cor danger do Bootstrap e texto branco */
+label:hover {
+  background-color: var(--bs-danger) !important;
+  color: white !important;
+}
+
+label:hover .text-dark {
+  color: white !important;
+}
+
+/* Checked: Aplica a cor danger do Bootstrap e texto branco quando checado */
+.btn-check:checked + .btn-outline-danger {
+  background-color: var(--bs-danger) !important;
+  color: white !important;
+}
+
+.btn-check:checked + .btn-outline-danger .text-dark {
+  color: white !important;
+}
+
+/* Active: Aplica a cor danger do Bootstrap e texto branco quando ativo */
+.btn-check:active + .btn-outline-danger {
+  background-color: var(--bs-danger) !important;
+  color: white !important;
+}
+
+.btn-check:active + .btn-outline-danger .text-dark {
+  color: white !important;
+}
+
+/* Hover sobre o botão check */
+.btn-check:hover + .btn-outline-danger {
+  background-color: var(--bs-danger) !important;
+  color: white !important;
+}
+
+.btn-check:hover + .btn-outline-danger .text-dark {
+  color: white !important;
+}
+
+
+.flex-even {
+  flex: 1;
+  min-width: 300px;
+}
