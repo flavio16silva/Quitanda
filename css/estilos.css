@@ -84,3 +84,8 @@ label:hover .text-dark {
 fieldset.row .form-floating>label {
   margin-left: calc(var(--bs-gutter-x) * 0.5);
 }
+
+/* adicionado para deixar links de paginação em vermelho */
+.page-link {
+  color: var(--bs-danger);
+}
