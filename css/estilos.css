@@ -89,3 +89,20 @@ fieldset.row .form-floating>label {
 .page-link {
   color: var(--bs-danger);
 }
+
+ /* Definir estilos personalizados para o tema */
+/* Definir estilos personalizados para o tema */
+[data-bs-theme="custom"] {
+  --bs-navbar-bg: #ff4400; /* Cor de fundo da navbar */
+  --bs-navbar-color: #fff; /* Cor do texto da navbar */
+}
+
+.navbar[data-bs-theme="custom"] {
+  background-color: var(--bs-navbar-bg) !important;
+  color: var(--bs-navbar-color) !important;
+}
+
+footer[data-bs-theme="custom"] {
+  background-color: var(--bs-navbar-bg) !important;
+  color: var(--bs-navbar-color) !important;
+}
