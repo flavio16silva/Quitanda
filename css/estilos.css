@@ -72,6 +72,7 @@ label:hover .text-dark {
   min-width: 300px;
 }
 
+/* Acordião */
 .accordion-button:not(.collapsed) {
   color: white;
   background-color: #dc3545;
@@ -97,8 +98,21 @@ fieldset.row .form-floating>label {
   --bs-navbar-color: #fff; /* Cor do texto da navbar */
 }
 
-/* navbar - orange */
+/* navbar/footer - orange */
 .navbar, footer[data-bs-theme="custom"] {
   background-color: var(--bs-navbar-bg) !important;
   color: var(--bs-navbar-color) !important;
+}
+/* Cor do botão do carrinho */
+.btn-add-car {
+  background-color: #ff4400;
+  border-color: #ff4400;
+  transition: transform 0.3s ease; 
+}
+/* Cor do botão do carrinho - hover */
+.btn-add-car:hover {
+  background-color: #e63e00; 
+  border-color: #e63e00; 
+  color: white; 
+  transform: translateY(-5px); 
 }
