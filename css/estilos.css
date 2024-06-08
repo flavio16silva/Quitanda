@@ -133,7 +133,8 @@ fieldset.row .form-floating>label {
 }
 
 /* Carousel Index_Dois */
-.carousel-caption h5, p {
+.carousel-caption h5, 
+.carousel-caption p {
   color: #fff !important;
   font-weight: bolder;
   font-size: 20px;
