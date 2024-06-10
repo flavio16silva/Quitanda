@@ -111,8 +111,8 @@ fieldset.row .form-floating>label {
 }
 /* Cor do botão do carrinho - hover */
 .btn-add-car:hover {
-  background-color: #e63e00; 
-  border-color: #e63e00; 
+  background-color: #ff4400; 
+  border-color: #ff4400; 
   color: white; 
   transform: translateY(-5px); 
 }
@@ -139,3 +139,31 @@ fieldset.row .form-floating>label {
   font-weight: bolder;
   font-size: 20px;
 }
+
+/* Botoes Diversos das páginas */
+.btn-all{
+  background-color: #ff4400; 
+  border-color: #ff4400; 
+  color: white; 
+}
+
+.btn-all:hover{
+  background-color: #ff4400; 
+  border-color: #ff4400; 
+  color: white; 
+}
+
+/* 
+    <div class="card-footer">
+                      <a href="#" class="btn btn-light disable t-2 d-block">
+                        <small>Reabastecendo Estoque</small>
+                      </a>
+                      <small class="text-black-50" >
+                        <b>Produto Esgotado</b>
+                      </small>
+                    </div>
+
+
+
+
+*/
