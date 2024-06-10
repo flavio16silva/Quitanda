@@ -2,6 +2,11 @@ body {
   min-width: 372px;
 }
 
+/* Definição de variáveis CSS personalizadas para cor laranja */
+:root {
+  --orange: #ff4400;
+}
+
 .wrapper{
     min-height: 100vh;
 }
@@ -26,9 +31,55 @@ label {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+
 /* Hover: Aplica a cor danger do Bootstrap e texto branco */
+/* label:hover {
+  background-color: var(--bs-navbar-bg) !important;
+  color: white !important;
+}
+
+label:hover .text-dark {
+  color: white !important;
+} */
+/* Checked: Aplica a cor danger do Bootstrap e texto branco quando checado */
+/* .btn-check:checked + .btn-outline-danger {
+  background-color: var(--bs-navbar-bg) !important;
+  color: white !important;
+} */
+/* .btn-check:checked + .btn-outline-danger .text-dark {
+  color: white !important;
+} */
+/* Active: Aplica a cor danger do Bootstrap e texto branco quando ativo */
+/* .btn-check:active + .btn-outline-danger {
+  background-color: var(--bs-navbar-bg) !important;
+  color: white !important;
+} */
+/* .btn-check:active + .btn-outline-danger .text-dark {
+  color: white !important;
+} */
+/* Hover sobre o botão check */
+/* .btn-check:hover + .btn-outline-danger {
+  background-color: var(--bs-navbar-bg) !important;
+  color: white !important;
+} */
+/* .btn-check:hover + .btn-outline-danger .text-dark {
+  color: white !important;
+} */
+
+/* ======== Estilo básico para .btn-outline-orange ========== */
+.btn-outline-orange {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.btn-outline-orange:hover {
+  background-color: var(--orange);
+  color: white;
+}
+
+/* Hover: Aplica a cor laranja personalizada e texto branco */
 label:hover {
-  background-color: var(--bs-danger) !important;
+  background-color: var(--orange) !important;
   color: white !important;
 }
 
@@ -36,36 +87,35 @@ label:hover .text-dark {
   color: white !important;
 }
 
-/* Checked: Aplica a cor danger do Bootstrap e texto branco quando checado */
-.btn-check:checked + .btn-outline-danger {
-  background-color: var(--bs-danger) !important;
+/* Checked: Aplica a cor laranja personalizada e texto branco quando checado */
+.btn-check:checked + .btn-outline-orange {
+  background-color: var(--orange) !important;
   color: white !important;
 }
 
-.btn-check:checked + .btn-outline-danger .text-dark {
+.btn-check:checked + .btn-outline-orange .text-dark {
   color: white !important;
 }
 
-/* Active: Aplica a cor danger do Bootstrap e texto branco quando ativo */
-.btn-check:active + .btn-outline-danger {
-  background-color: var(--bs-danger) !important;
+/* Active: Aplica a cor laranja personalizada e texto branco quando ativo */
+.btn-check:active + .btn-outline-orange {
+  background-color: var(--orange) !important;
   color: white !important;
 }
 
-.btn-check:active + .btn-outline-danger .text-dark {
+.btn-check:active + .btn-outline-orange .text-dark {
   color: white !important;
 }
 
 /* Hover sobre o botão check */
-.btn-check:hover + .btn-outline-danger {
-  background-color: var(--bs-danger) !important;
+.btn-check:hover + .btn-outline-orange {
+  background-color: var(--orange) !important;
   color: white !important;
 }
 
-.btn-check:hover + .btn-outline-danger .text-dark {
+.btn-check:hover + .btn-outline-orange .text-dark {
   color: white !important;
 }
-
 
 .flex-even {
   flex: 1;
