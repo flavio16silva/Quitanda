@@ -203,7 +203,38 @@ fieldset.row .form-floating>label {
   color: white; 
 }
 
-/* 
+/* Lixeiras da tela carrinho */
+.btn-outline-lixeira {
+  color: #ff4400;
+  border-color: #ff4400;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-outline-lixeira:hover,
+.btn-outline-lixeira:not(:disabled):not(.disabled):active,
+.btn-outline-lixeira:not(:disabled):not(.disabled).active,
+.show > .btn-outline-lixeira.dropdown-toggle {
+  color: white;
+  background-color: #ff4400;
+  border-color: #ff4400;
+}
+
+.btn-outline-lixeira:focus,
+.btn-outline-lixeira.focus,
+.btn-outline-lixeira:not(:disabled):not(.disabled):active:focus,
+.btn-outline-lixeira:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 68, 0, 0.5);
+}
+
+.btn-outline-lixeira.disabled,
+.btn-outline-lixeira:disabled {
+  color: #ff4400;
+  background-color: transparent;
+}
+
+
+/* Em caso de produto esgotado 
     <div class="card-footer">
                       <a href="#" class="btn btn-light disable t-2 d-block">
                         <small>Reabastecendo Estoque</small>
