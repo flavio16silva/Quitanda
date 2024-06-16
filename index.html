@@ -114,10 +114,10 @@
                 <div class="col-12 col-md-7">
                     <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <form class="d-inline-block">
-                          <select class="form-select form-select-sm">
-                            <option>Ordenar pelo nome</option>
-                            <option>Ordenar pelo menor preço</option>
-                            <option>Ordenar pelo maior preço</option>
+                          <select id="sortSelect" class="form-select form-select-sm">
+                            <option value="name">Ordenar pelo nome</option>
+                            <option value="priceAsc">Ordenar pelo menor preço</option>
+                            <option value="priceDesc">Ordenar pelo maior preço</option>
                           </select>
                         </form>
                         <nav class="d-inline-block me-3">
@@ -137,8 +137,8 @@
 
               <hr mt-3>
 
-              <div class="row g-3">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div id="productGrid" class="row g-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Banana Prata" data-price="8.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -159,7 +159,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Abacaxi" data-price="6.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -178,7 +178,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Mamão" data-price="5.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -201,7 +201,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Maça" data-price="4.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
@@ -220,7 +220,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Goiaba" data-price="3.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -239,7 +239,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Laranja" data-price="8.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -258,7 +258,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Abacate" data-price="6.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -277,7 +277,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Pera" data-price="4.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -296,7 +296,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Abóbora" data-price="7.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
@@ -315,7 +315,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Abobrinha" data-price="5.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -334,7 +334,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Repolho" data-price="3,80">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -353,7 +353,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 product-card" data-name="Alho" data-price="3,70">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -380,10 +380,10 @@
                  <div class="col-12">
                     <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <form class="d-inline-block">
-                          <select class="form-select form-select-sm">
-                            <option>Ordenar pelo nome</option>
-                            <option>Ordenar pelo menor preço</option>
-                            <option>Ordenar pelo maior preço</option>
+                          <select id="sortSelect" class="form-select form-select-sm">
+                            <option value="name">Ordenar pelo nome</option>
+                            <option value="priceAsc">Ordenar pelo menor preço</option>
+                            <option value="priceDesc">Ordenar pelo maior preço</option>
                           </select>
                         </form>
                         <nav class="d-inline-block me-3">
@@ -446,6 +446,11 @@
     <!-- Bootstrap JavaScript -->
     <script src="/quitanda/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Meu JavaScript -->
+    <script src="/quitanda/meu_script.js/ordenar.js"></script>
+
+
 
   </body>
 </html>
