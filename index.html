@@ -18,7 +18,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/quitanda/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/quitanda/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    
 
 
     <!-- CSS -->
@@ -67,6 +68,15 @@
           </div>
         </nav>
 
+          <!-- Mensagem de erro no topo da tela -->
+          <!-- <div id="errorMessage" class="alert alert-danger text-center" style="display: none;" role="alert">
+            A fruta não existe.
+          </div> -->
+
+          <div id="noProductsMessage" class=" alert alert-danger text-center mt-3" style="display: none;" role="alert">
+            Produto não cadastrado no sistema. 
+          </div>
+
         <div class="container">
           <div id="carouselMain" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -106,8 +116,8 @@
                 <div class="col-12 col-md-5">
                   <form class="justify-content-center justify-content-md-start mb-3 mb-md-0">
                     <div class="input-group input-group-sm">
-                      <input type="text" class="form-control" placeholder="Digite aqui o que procura">
-                      <button class="btn btn-danger btn-all">Buscar</button>
+                      <input type="text" id="searchInput" class="form-control" placeholder="Digite aqui o que procura">
+                      <button id="searchButton" class="btn btn-danger btn-all">Buscar</button>
                     </div>
                   </form>
                 </div>
@@ -371,7 +381,7 @@
                       <small class="text-sucess">250,5 kg em estoque</small>
                     </div>
                   </div>
-                </div>
+                </div>             
 
               </div>
 
@@ -449,6 +459,7 @@
 
     <!-- Meu JavaScript -->
     <script src="/quitanda/meu_script.js/ordenar.js"></script>
+    <script src="/quitanda/meu_script.js/buscar.js"></script>
 
 
 
