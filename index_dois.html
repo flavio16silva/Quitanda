@@ -67,6 +67,10 @@
           </div>
         </nav>
 
+        <div id="noProductsMessage" class=" alert alert-warning text-center mt-3 w-50 mx-auto font-weight-bold" style="display: none;" role="alert">
+          Produto não cadastrado no sistema. 
+        </div>
+
         <div class="container">
           <div id="carouselMain" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -126,10 +130,10 @@
                 <div class="col-12 col-md-7">
                     <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <form class="d-inline-block">
-                          <select class="form-select form-select-sm">
-                            <option>Ordenar pelo nome</option>
-                            <option>Ordenar pelo menor preço</option>
-                            <option>Ordenar pelo maior preço</option>
+                          <select id="sortSelect1" class="form-select form-select-sm">
+                            <option value="name">Ordenar pelo nome</option>
+                            <option value="priceAsc">Ordenar pelo menor preço</option>
+                            <option value="priceDesc">Ordenar pelo maior preço</option>
                           </select>
                         </form>
                         <nav class="d-inline-block me-3">
@@ -149,8 +153,8 @@
 
               <hr mt-3>
 
-              <div class="row g-3">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+              <div id="productGrid" class="row g-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Morango" data-price="5.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -171,7 +175,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Banana Prata" data-price="5.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -389,10 +393,10 @@
                  <div class="col-12">
                     <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <form class="d-inline-block">
-                          <select class="form-select form-select-sm">
-                            <option>Ordenar pelo nome</option>
-                            <option>Ordenar pelo menor preço</option>
-                            <option>Ordenar pelo maior preço</option>
+                          <select id="sortSelect2" class="form-select form-select-sm">
+                            <option value="name">Ordenar pelo nome</option>
+                            <option value="priceAsc">Ordenar pelo menor preço</option>
+                            <option value="priceDesc">Ordenar pelo maior preço</option>
                           </select>
                         </form>
                         <nav class="d-inline-block me-3">
@@ -455,6 +459,9 @@
     <!-- Bootstrap JavaScript -->
     <script src="/quitanda/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Inclua o arquivo de funções reutilizáveis -->
+    <script src="path/to/productUtils.js"></script>
 
   </body>
 </html>
