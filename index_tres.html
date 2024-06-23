@@ -15,10 +15,10 @@
     <meta name="msapplication-TileImage" content="/quitanda/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/quitanda/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/quitanda/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/quitanda/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/quitanda/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
 
 
     <!-- CSS -->
@@ -126,17 +126,17 @@
                 <div class="col-12 col-md-7">
                     <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <form class="d-inline-block">
-                          <select class="form-select form-select-sm">
-                            <option>Ordenar pelo nome</option>
-                            <option>Ordenar pelo menor preço</option>
-                            <option>Ordenar pelo maior preço</option>
+                          <select id="sortSelect" class="form-select form-select-sm">
+                            <option value="name">Ordenar pelo nome</option>
+                            <option value="priceAsc">Ordenar pelo menor preço</option>
+                            <option value="priceDesc">Ordenar pelo maior preço</option>
                           </select>
                         </form>
                         <nav class="d-inline-block me-3">
                           <ul class="pagination pagination-sm my-0">
                             <li class="page-item"><a class="page-link" href="index.html">1</a></li>
                             <li class="page-item"><a class="page-link" href="index_dois.html">2</a></li>
-                            <li class="page-item"><a class="page-link" href="index_tres.html">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item"><a class="page-link" href="#">4</a></li>
                             <li class="page-item"><a class="page-link" href="#">5</a></li>
                             <li class="page-item"><a class="page-link" href="#">6</a></li>
@@ -150,7 +150,7 @@
               <hr mt-3>
 
               <div class="row g-3">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Alface" data-price="2.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -171,7 +171,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Beringela" data-price="5.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -190,7 +190,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Gengibre" data-price="2.50">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -210,7 +210,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Cenoura" data-price="5.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
@@ -229,7 +229,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Coco" data-price="5.80">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -248,7 +248,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Rabanete" data-price="2.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -267,7 +267,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Agrião" data-price="4.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -286,7 +286,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Framboesa" data-price="5.80">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -305,7 +305,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Castanha" data-price="7.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
@@ -324,7 +324,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Uva" data-price="8.00">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -343,7 +343,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Quiabo" data-price="9.80">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -362,7 +362,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-name="Maracujá" data-price="6.70">
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -389,10 +389,10 @@
                  <div class="col-12">
                     <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <form class="d-inline-block">
-                          <select class="form-select form-select-sm">
-                            <option>Ordenar pelo nome</option>
-                            <option>Ordenar pelo menor preço</option>
-                            <option>Ordenar pelo maior preço</option>
+                          <select id="sortSelect" class="form-select form-select-sm">
+                            <option value="name">Ordenar pelo nome</option>
+                            <option value="priceAsc">Ordenar pelo menor preço</option>
+                            <option value="priceDesc">Ordenar pelo maior preço</option>
                           </select>
                         </form>
                         <nav class="d-inline-block me-3">
@@ -455,6 +455,11 @@
     <!-- Bootstrap JavaScript -->
     <script src="/quitanda/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+
+     <!-- Meu JavaScript -->
+      <!-- <script src="/quitanda/meu_script.js/ordenar.js"></script>
+      <script src="/quitanda/meu_script.js/buscar.js"></script> -->
+      <script src="/quitanda/meu_script.js/geral.js"></script>
 
   </body>
 </html>
